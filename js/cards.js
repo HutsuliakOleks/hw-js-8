@@ -1,3 +1,4 @@
+// Завдання 2
 const cards = [
   "Карточка-1",
   "Карточка-2",
@@ -5,14 +6,17 @@ const cards = [
   "Карточка-4",
   "Карточка-5",
 ];
-cards.splice(1, 1, "Карточка-2");
-console.log(cards);
-const partiallyCards = cards.slice(1, 3);
-console.log(partiallyCards);
+// Завдання 3
 const cardsToRemove = "Карточка-3";
+const cardIndex = cards.indexOf(cardsToRemove);
+cards.splice(cardIndex, 1);
+console.log(cards);
+// Завдання 4
 const cardsToInsert = "Карточка-6";
+cards.push(cardsToInsert);
+console.log(cards);
+// Завдання 5
 const cardsToUpdate = "Карточка-4";
-const cardsRemoving = cards.indexOf(cardsToRemove, 3);
-const cardsInserting = cards.push(cardsToInsert);
-const cardsUpdating = cards.splice(1, 2, cardsToUpdate);
+const cardIndex1 = cards.indexOf(cardsToUpdate);
+cards.splice(cardIndex1, cardsToUpdate);
 console.log(cards);
